@@ -1,12 +1,17 @@
-export const Reset = '\x1b[0m';
-export const effects = {
+export const Reset: string = '\x1b[0m';
+export type Effect = 'bright' | 'dim' | 'italic' | 'underscore' | 'blink';
+export type Color = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white';
+
+
+export const effects: Record<Effect, string> = {
     bright: '\x1b[1m',
     dim: '\x1b[2m',
     italic: '\x1b[3m',
     underscore: '\x1b[4m',
     blink: '\x1b[5m',
 };
-export const fontColors = {
+
+export const fontColors: Record<Color, string> = {
     black: '\x1b[30m',
     red: '\x1b[31m',
     green: '\x1b[32m',
@@ -16,7 +21,8 @@ export const fontColors = {
     cyan: '\x1b[36m',
     white: '\x1b[37m',
 };
-export const backgroundColors = {
+
+export const backgroundColors: Record<Color, string> = {
     black: '\x1b[40m',
     red: '\x1b[41m',
     green: '\x1b[42m',
@@ -26,7 +32,8 @@ export const backgroundColors = {
     cyan: '\x1b[46m',
     white: '\x1b[47m',
 };
-export const contrast = {
+
+export const contrast: Record<Color, 'white' | 'black'> = {
     black: 'white',
     red: 'black',
     green: 'black',

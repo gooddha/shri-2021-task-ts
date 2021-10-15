@@ -1,5 +1,13 @@
 import { color } from './colors';
-export function markdown(text, options) {
+
+export interface TextOptions {
+    bold?: boolean;
+    italic?: boolean;
+    mono?: boolean;
+    link?: string;
+}
+
+export function markdown(text: string, options: TextOptions): string {
     let result = text;
     if (options) {
         if (options.bold) {
