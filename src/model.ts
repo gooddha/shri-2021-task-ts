@@ -1,6 +1,6 @@
 export const Reset: string = '\x1b[0m';
 export type Effect = 'bright' | 'dim' | 'italic' | 'underscore' | 'blink';
-export type Color = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white';
+export type Color = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' | string;
 
 
 export const effects: Record<Effect, string> = {
